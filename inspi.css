@@ -2,7 +2,13 @@ body{
     background-color: turquoise;
 }
 .divit1{
-    border: 3px solid green;
+    border: 3px solid lightslategrey;
+    background-color: rgb(96, 96, 245);
+}
+.divit2{
+    text-align: center;
+    border: 3px solid lightslategrey;
+    background-color: rgb(96, 96, 245);
 }
 .music{
     padding-left: 20px;
