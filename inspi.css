@@ -1,3 +1,18 @@
 body{
     background-color: turquoise;
 }
+.divit1{
+    border: 3px solid green;
+}
+.music{
+    padding-left: 20px;
+    width: 30.1%;
+}
+.code{
+    padding-left: 10px;
+    width: 40%;
+}
+.music2{
+    padding-left: 10px;
+    width: 20.4%;
+}
