@@ -5,6 +5,12 @@ body{
     border: 3px solid lightslategrey;
     background-color: rgb(96, 96, 245);
 }
+button{
+    float: right;
+    color: black;
+    font-weight: bold;
+    background: gray;
+}
 .divit2{
     text-align: center;
     border: 3px solid lightslategrey;
@@ -21,4 +27,11 @@ body{
 .music2{
     padding-left: 10px;
     width: 20.4%;
+}
+
+.here{
+    width: 41.6%;
+}
+.there{
+    width: 30%;
 }

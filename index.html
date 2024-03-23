@@ -7,8 +7,23 @@
     <link rel="stylesheet" href="inspi.css">
 </head>
 <body>
+    
+    <button id="playButton">  please press this button </button>
     <h1> Things that inspire me <h4> Luis Angel "Luca" Correa Gómez </h4></h1>
-
+    
+    <audio id="audioPlayer"  src="rickroll.MP3" autoplay></audio>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var audio = document.getElementById('audioPlayer');
+            if (audio.paused) {
+                audio.play();
+                document.getElementById('playButton').textContent = 'Pausar música';
+            } else {
+                audio.pause();
+                document.getElementById('playButton').textContent = 'Reproducir música';
+            }
+        });
+    </script>
     <div class="divit2">
         <h2>Teachers</h2>
         <div class="divit1">
@@ -17,5 +32,16 @@
             <img src="img/Julio1.png" alt="" class="music2">
         </div>
     </div>
+    <br><br>
+    <div class="divit2">
+        <h2> Parents </h2>
+        <div class="divit1">
+            <img src="img/Brotherandmoms.png" alt="" class="here">
+            <img src="img/Dad.jpg" alt="" class="there">
+        </div>
+    </div>
+
+    <p style="text-align: end;">&copy; 2024 Lucawas. All rights reserved</p>
+    
 </body>
 </html>
