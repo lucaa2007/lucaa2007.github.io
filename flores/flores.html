@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Imágenes</title>
+    <style>
+        .imagen {
+            display: none; /* Las imágenes están ocultas por defecto */
+            margin: 10px 0;
+        }
+
+        #texto {
+            font-size: 24px; /* Tamaño de fuente */
+            margin-top: 20px; /* Espaciado superior */
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>Flores amarillas para ti <3 </h1>
+
+    
+        <button onclick="imprimirTexto()">Mostrar Mensaje :D</button>
+        <div id="texto"></div>
+    
+        <script>
+            function imprimirTexto() {
+                const texto = "Hola Andre, Te quiero dar un mensaje especial: \n Espero lo mejor para ti, espero que logres cumplir tus sueños, espero que logres llegar al día de mañana \n También quiero decirte que extraño pasar momentos contigo, eres una gran amiga \n No solo conmigo, eres una persona fabulosa y fenomenal \n Te quiero mucho \n                  -Luca.";
+                const contenedor = document.getElementById('texto');
+                contenedor.innerHTML = ""; // Limpiar el contenedor antes de imprimir
+                let index = 0; // Índice para las letras
+    
+                const intervalo = setInterval(() => {
+                    if (index < texto.length) {
+                        // Reemplazar saltos de línea por <br>
+                        if (texto[index] === '\n') {
+                            contenedor.innerHTML += '<br>'; // Agregar un salto de línea
+                        } else {
+                            contenedor.innerHTML += texto[index]; // Imprimir la letra actual
+                        }
+                        index++; // Incrementar el índice
+                    } else {
+                        clearInterval(intervalo); // Detener el intervalo cuando se complete el texto
+                    }
+                }, 20); // Retardo de 100 ms entre letras
+            }
+        </script>
+
+    <button onclick="mostrarImagenes()">Mostrar Imágenes</button>
+
+    <div id="imagenes">
+        <img src="img/Flor(1).png" width="15%" alt="Imagen 1" class="imagen">
+        <img src="img/andrian.jpg" width="15%" alt="Imagen 2" class="imagen">
+        <img src="img/Flor(3).png" width="15%" alt="Imagen 3" class="imagen">
+    </div>
+
+    <script>
+        function mostrarImagenes() {
+            // Obtener todas las imágenes con la clase 'imagen'
+            const imagenes = document.querySelectorAll('.imagen');
+            // Hacer visibles las imágenes
+            imagenes.forEach(imagen => {
+                imagen.style.display = 'block'; // Cambiar a 'block' para mostrar la imagen
+            });
+        }
+    </script>
+
+
+</body>
+</html>
