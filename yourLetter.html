@@ -7,66 +7,45 @@
     <title>Your Letter</title>
     <style>
         #texto {
-            font-size: 20px; /* Tamaño de fuente */
-            margin-top: 20px; /* Espaciado superior */
+            font-size: 20px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body style="background-color: blue;">
 
-    <h2>
+    <h2 style="text-align: center;">
         Mis sentimientos por ti.
     </h2>
         
-    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; background-color: turquoise; border: 1px solid blueviolet;padding: 20px; border-radius: 10px;"> 
-        Tomate el tiempo para leerlo, es un mensaje muy largo jsjsjs una disculpa. <br>
-        Agradecería que lo leyeras con atención. <br><br>
+    <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; background-color: turquoise; border: 1px solid blueviolet; padding: 20px; border-radius: 10px; text-align: center;"> 
+        <h3>Tomate el tiempo para leerlo, es un mensaje muy largo jsjsjs una disculpa. <br>
+            Agradecería que lo leyeras completo y con atención. <br><br></h3>
         <button onclick="imprimirTexto()">Leer Mensaje</button>
         <div id="texto"></div>
         
-        <script>
-            function imprimirTexto() {
+        <script> 
+            function imprimirTexto () {
                 const contenedor = document.getElementById('texto');
-                contenedor.innerHTML = ""; // Limpiar el contenedor antes de imprimir
-                let index = 0; // Índice para las letras
+                contenedor.innerHTML = "";
+                let index = 0;
                 
-                const intervalo = setInterval(() => {
+                const interval = setInterval(() => {
                     if (index < texto.length) {
-                        // Reemplazar saltos de línea por <br>
-                        if (texto[index] === '\n') {
-                            contenedor.innerHTML += '<br>'; // Agregar un salto de línea
+                        if(texto[index] === '\n') {
+                            contenedor.innerHTML += '<br>';
+                            const texto = "Andre... llevamos 3 años siendo amigos y llevo enamorado de ti 2. \nEl día que te abrí mi corazón y me dijiste que sentías lo mismo (bueno, el día que empezamos a quedar).\n Fue el día más feliz de mi vida, y el día que tomaste la decisión de terminar conmigo fue el más triste, adoraba pasar tiempo contigo y sabía que te iba a extrañar. \n\nTener novia no hizo que mi pena se fuera, claro se ocultó un tiempo, pero el día que terminé con ella, fue un día decepcionante, me di cuenta que seguía enamorado de ti… \nDesde que estoy enamorado de ti, cada canción de amor, cada canción que menciona mínimamente el amor, me hace pensar en ti, es difícil ver tus fotos en mi celular, ver lo hermosa que eres y lo feliz que yo era a tu lado, mi mundo se derrumbó el día que terminaste conmigo, y jeje no pasa nada, no te culpo, es una decisión respetable, no tienes que estar con alguien a quien no quieres… \n\nBueno, volviendo al tema, desde que terminaste conmigo, tuve la esperanza de que tendría una oportunidad contigo, y a pesar de que yo traté de seguir avanzando, siempre estabas ahí. \n\nConocí a una chica llamada Ross, me gustaba mucho, ese mismo verano me invitaste a tu casa, cuando recibí tu mensaje, Ross salió de mi mente. \nEl amor de mi vida estaba invitándome a su casa, como en los viejos tiempos, la verdad esa vez me la pase muy bien, pero al ver que no tenías intenciones de volver conmigo, traté de seguir con mis cosas, al final Ross se alejó de mi y ya no volvió a hablar conmigo. \n\nLa reanudación de nuestra amistad me hizo muy feliz sabía que no te gustaba pero al menos éramos cercanos y con eso bastaba para mi, hasta que mis sentimientos por ti se avivaron, y ¿Cómo no?, eres la mejor jsjsjs, muy buena amiga, súper carismática y súper amable, solo que volví a ilusionarme, ahora ya no aguanto y estoy escribiendo esto… \n\n(fun fact: lloré cada vez que escribía y leía esto jeje)\n\nNo sé qué hacer, pero no puedo superarte, eres lo mejor que me ha pasado, perder tu amistad sería lo peor para mi, así que tendré qu aguantarme y al menos disfrutar tu amistad y los momentos que me permites pasar contigo.\n Lo que viene a continuación son comentarios que añadí con el tiempo y no encontré la manera de introducirlos dentro del mensaje principal jeje, espero seguir con tu atención: \n\n Lo que diré ahora es algo que quiero sacar de mi corazón de una vez:\nSi llegas a sentir algo por mi, me gustaría que me lo externaras y/o me lo dijeras \nLo más probable es que te corrresponda (hehe i've been waiting for you, y sí sigo ilusionado y con esperanzas), Si no es el caso, solo ignora lo que dije jsjsjs\n\n extraño tus juegos, tus bromas, tus abrazos, tus ojos, tu sonrisa, oler tu perfume, \ntus <<buenas noches>>, tus <<buenaas>> de buenos días jsjsjs, extraño pasar tiempo contigo, extraño molestarte, extraño como te burlabas de mí cuando tartamudeaba, extraño reírnos de como perdías en ese juego, extraño dejarte ganar solo para ver tu sonrisa de orgullo,\n extraño ver cómo me ganabas y ver cómo me impresionas, extraño compartir tu música, escuchar lo que escuchas y creer que piensas en mi cuando lo escuchas\n\n\nTe extraño Andre, te quiero mucho y te mando un abrazo… \nAdios.";
                         } else {
-                            contenedor.innerHTML += texto[index]; // Imprimir la letra actual
+                            contenedor.innerHTML += texto[index]
                         }
-                        const texto = "Andre... llevamos 3 años siendo amigos y llevo enamorado de ti 2. \nEl día que te abrí mi corazón y me dijiste que sentías lo mismo (bueno, el día que empezamos a quedar).\n Fue el día más feliz de mi vida, y el día que tomaste la decisión de terminar conmigo fue el mas triste, adoraba pasar tiempo contigo y sabía que te iba a extrañar. \n\nTener novia no hizo que mi pena se fuera, claro se ocultó un tiempo, pero el día que terminé con ella, fue un día decepcionante, me di cuenta que seguía enamorado de ti… \nDesde que estoy enamorado de ti, cada canción de amor, cada canción que menciona mínimamente el amor, me hace pensar en ti, es difícil ver tus fotos en mi celular, ver lo hermosa que eres y lo feliz que yo era a tu lado, mi mundo se derrumbó el día que terminaste conmigo, y jeje no pasa nada, no te culpo, es una decisión respetable, no tienes que estar con alguien a quien no quieres… \n\nBueno, volviendo al tema, desde que terminaste conmigo, tuve la esperanza de que tendría una oportunidad contigo, y a pesar de que yo traté de seguir avanzando, siempre estabas ahí. \n\nConocí a una chica llamada Ross, me gustaba mucho, ese mismo verano me invitaste a tu casa, cuando recibí tu mensaje, Ross salió de mi mente. \nEl amor de mi vida estaba invitándome a su casa, como en los viejos tiempos, la verdad esa vez me la pase muy bien, pero al ver que no tenías intenciones de volver conmigo, seguí con mis cosas, al final Ross se alejó de mi y ya no volvió a hablar conmigo. \n\nLa reanudación de nuestra amistad me hizo muy feliz sabía que no te gustaba pero al menos éramos cercanos y con eso bastaba para mi, hasta que mis sentimientos por ti se avivaron, y como no?, eres la mejor jsjsjs, muy buena amiga, súper carismática y súper amable, solo que volví a ilusionarme, ahora ya no aguanto y estoy escribiendo esto… \n\n(fun fact: lloré cada vez que escribía y leía esto jeje)\n\nNo sé qué hacer, pero no puedo superarte, eres lo mejor que me ha pasado, perder tu amistad sería lo peor para mi, pero ser tu amigo me lastima mucho y aún más cuando después de cada fantasía, sé que la persona que amas no soy yo… \n\nTe extraño Andre, te quiero mucho y te mando un abrazo… \nAdios \n\n\n\n\n";
-                        index++; // Incrementar el índice
+                        index++;
                     } else {
-                        clearInterval(intervalo); // Detener el intervalo cuando se complete el texto
+                        clearInterval(interval);
                     }
-                }, 80); // Retardo de 100 ms entre letras
-            }
+                }, 80); 
+             }
         </script>
-
         
     </div>
-
-    Bueno, volviendo al tema, siempre, desde que terminaste conmigo, tuve la esperanza de que tendría una oportunidad contigo, y a pesar de que yo traté de seguir avanzando, siempre estabas ahí.
-
-        Conocí a una chica llamada Ross, me gustaba mucho, pero me invitaste a tu casa, fue en el verano, cuando recibí tu mensaje, Ross salió de mi mente, y el amor de mi vida estaba invitándome a su casa, como en lo viejos tiempos, la verdad esa vez me la pase muy bien, pero al ver que no tenías intenciones de volver conmigo, seguí con mis cosas, al final Ross se alejó de mi y ya no volvió a hablar conmigo.
-
-        La reanudación de nuestra amistad me hizo muy feliz, sabía que no te gustaba pero al menos éramos cercanos y con eso bastaba para mi, hasta que mis sentimientos por ti se avivaron, y como no?, eres la mejor jsjsjs, muy buena amiga, súper carismática y súper amable, solo que volví a ilusionarme, ahora ya no aguanto y estoy escribiendo esto… (fun fact: lloré cada vez que escribía y leía esto jeje)
-
-        No sé qué hacer pero no puedo superarte, eres lo mejor que me ha pasado, perder tu amistad sería lo peor para mi, pero ser tu amigo me lastima mucho y aún más cuando después de cada fantasía, sé que la persona que amas no soy yo…
-
-        Te extraño Andre, te quiero mucho y te mando un abrazo…
-        Adios.
-        
-        Lo que diré a continuación es algo que quiero sacar de una vez: si llegas a sentir algo por mi, me gustaría que me lo dijeras, es muy muy probable que te corresponda, como te dije, he estado esperando jsjsjs (sí sigo ilusionado creyendo que te podré gustar) 
-        
-        extraño tus juegos, tus bromas, tus abrazos, tus ojos, tu sonrisa, oler tu perfume, tus “buenas noches”, tus “buenaas” de buenos días, extraño pasar tiempo contigo, extraño molestarte, extraño reírnos de cómo perdías en el juego, extraño dejarte ganar para ver esa sonrisa de orgullo, extraño ver cómo me ganabas y ver cómo me impresionas, extraño compartir tu música, escuchar lo que escuchas y creer que piensas en mi cuando lo escuchas.
-        
-        Entregar la carta el 13 de febrero y al hacerlo decirle que este mensaje viene de mi corazón y que agradecería que se de tiempo de leerlo, el mensaje es muy largo jeje, y espero que el día de mañana, el 14 de febrero, lo pase muy bien con quien lo vaya a pasar:
-        Con la persona que creo que le gusta, con sus amigos, con su familia o con ella misma, que está carta no haga sentirla mal, pues es lo que menos desearía
-
 </body>
 </html>
